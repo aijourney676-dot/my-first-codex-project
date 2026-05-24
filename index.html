@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My First Web Project</title>
+  <meta name="description" content="A clean beginner website built with HTML and CSS.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#top">My First Project</a>
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#journey">Journey</a>
+        <a class="nav-button" href="#start">Get Started</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-content">
+        <p class="eyebrow">Learning web development</p>
+        <h1 id="hero-title">My First Web Project</h1>
+        <p class="hero-text">
+          A simple, professional website created as the first step in my coding journey.
+          Built with HTML and CSS, and ready to grow as I learn more.
+        </p>
+        <div class="hero-actions">
+          <a class="button" href="#journey">Explore the project</a>
+          <a class="text-link" href="#about">Learn more</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="container split">
+        <div>
+          <p class="section-label">About</p>
+          <h2>A strong starting point</h2>
+        </div>
+        <p>
+          This page is designed to practice the foundations of a website: meaningful
+          structure, thoughtful styling, and a layout that works on different screen sizes.
+        </p>
+      </div>
+    </section>
+
+    <section class="journey" id="journey" aria-labelledby="journey-title">
+      <div class="container">
+        <p class="section-label">The journey</p>
+        <h2 id="journey-title">Three steps to building online</h2>
+        <div class="cards">
+          <article class="card">
+            <span>01</span>
+            <h3>Build</h3>
+            <p>Create page structure and content using clear, accessible HTML.</p>
+          </article>
+          <article class="card">
+            <span>02</span>
+            <h3>Style</h3>
+            <p>Use CSS to create a clean layout, color palette, and typography.</p>
+          </article>
+          <article class="card">
+            <span>03</span>
+            <h3>Share</h3>
+            <p>Publish the project with GitHub Pages so others can see it.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="start">
+      <div class="container cta-box">
+        <div>
+          <p class="section-label">Next step</p>
+          <h2>Keep learning and improving</h2>
+        </div>
+        <a class="button" href="https://developer.mozilla.org/en-US/docs/Learn_web_development" target="_blank" rel="noopener noreferrer">Learn web basics</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Built with HTML and CSS as my first web development project.</p>
+    </div>
+  </footer>
+</body>
+</html>
