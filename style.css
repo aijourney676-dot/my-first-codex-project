@@ -1,0 +1,277 @@
+:root {
+  --navy: #102a43;
+  --blue: #2563eb;
+  --blue-dark: #1d4ed8;
+  --text: #334e68;
+  --muted: #627d98;
+  --background: #f7fafc;
+  --surface: #ffffff;
+  --border: #e2e8f0;
+  --shadow: 0 16px 38px rgba(16, 42, 67, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  background: var(--background);
+  font-family: Arial, "Helvetica Neue", sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: min(1120px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 72px;
+  gap: 24px;
+}
+
+.brand {
+  color: var(--navy);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+nav a:hover,
+.text-link:hover {
+  color: var(--blue);
+}
+
+.nav-button {
+  padding: 9px 17px;
+  color: var(--blue);
+  border: 1px solid #bfdbfe;
+  border-radius: 999px;
+}
+
+.hero {
+  padding: 98px 0 92px;
+  background: linear-gradient(135deg, #eff6ff 0%, #f7fafc 52%, #ffffff 100%);
+}
+
+.hero-content {
+  max-width: 760px;
+  text-align: center;
+}
+
+.eyebrow,
+.section-label {
+  margin: 0 0 14px;
+  color: var(--blue);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0 0 20px;
+  color: var(--navy);
+  font-size: clamp(2.7rem, 6vw, 4.3rem);
+  letter-spacing: -0.055em;
+  line-height: 1.08;
+}
+
+.hero-text {
+  max-width: 650px;
+  margin: 0 auto 34px;
+  color: var(--muted);
+  font-size: 1.15rem;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 26px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 23px;
+  color: #ffffff;
+  background: var(--blue);
+  border-radius: 8px;
+  font-weight: 700;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.button:hover {
+  background: var(--blue-dark);
+  transform: translateY(-1px);
+}
+
+.text-link {
+  color: var(--navy);
+  font-weight: 700;
+}
+
+.about {
+  padding: 68px 0;
+  background: var(--surface);
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 0.85fr 1fr;
+  align-items: end;
+  gap: 62px;
+}
+
+h2 {
+  margin: 0;
+  color: var(--navy);
+  font-size: clamp(1.8rem, 3vw, 2.25rem);
+  letter-spacing: -0.035em;
+  line-height: 1.2;
+}
+
+.split > p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.journey {
+  padding: 78px 0;
+}
+
+.journey h2 {
+  margin-bottom: 36px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.card {
+  padding: 30px 27px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+}
+
+.card span {
+  color: var(--blue);
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+.card h3 {
+  margin: 13px 0 10px;
+  color: var(--navy);
+  font-size: 1.3rem;
+}
+
+.card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.cta {
+  padding: 0 0 82px;
+}
+
+.cta-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 34px;
+  padding: 42px 48px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+}
+
+.site-footer {
+  padding: 28px 0;
+  color: var(--muted);
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+@media (max-width: 760px) {
+  .container {
+    width: min(100% - 32px, 1120px);
+  }
+
+  .nav {
+    flex-direction: column;
+    padding: 17px 0;
+  }
+
+  nav {
+    gap: 18px;
+    font-size: 0.93rem;
+  }
+
+  .hero {
+    padding: 68px 0;
+  }
+
+  .hero-actions,
+  .cta-box {
+    flex-direction: column;
+  }
+
+  .split,
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .about,
+  .journey {
+    padding: 54px 0;
+  }
+
+  .cta-box {
+    align-items: flex-start;
+    padding: 30px 25px;
+  }
+}
